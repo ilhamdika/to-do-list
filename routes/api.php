@@ -17,6 +17,8 @@ use Symfony\Component\HttpFoundation\Response;
 */
 
 Route::post('/todos', [TodoController::class, 'createTodo']);
+Route::get('/export-todo-excel', [TodoController::class, 'exportExcel']);
+Route::get('/export', [TodoController::class, 'export']);
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
