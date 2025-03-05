@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\TodoController;
+use Symfony\Component\HttpFoundation\Response;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +21,10 @@ Route::post('/todos', [TodoController::class, 'createTodo']);
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+
+Route::any('{any}', function () {
+    return response()->json([
+        'message' => 'Method salah'
+    ], Response::HTTP_METHOD_NOT_ALLOWED);
+})->where('any', '.*');
