@@ -4,8 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
-{
+return new class extends Migration {
     /**
      * Run the migrations.
      */
@@ -13,6 +12,12 @@ return new class extends Migration
     {
         Schema::create('todos', function (Blueprint $table) {
             $table->id();
+            $table->string('title');
+            $table->string('assignee')->nullable();
+            $table->date('due_date');
+            $table->decimal('time_tracked', 8, 2)->default(0);
+            $table->enum('status', ['pending', 'open', 'in_progress', 'completed'])->default('pending');
+            $table->enum('priority', ['low', 'medium', 'high']);
             $table->timestamps();
         });
     }
