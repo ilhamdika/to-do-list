@@ -45,3 +45,11 @@ php artisan serve
 ```
 
 Akses aplikasi di `http://127.0.0.1:8000`.
+
+## Hasil running di postman
+
+## Berikut adalah listnya
+
+### 1️ API Create Todo List
+
+![API Create Todo List](storage/images/gambar1.png)
