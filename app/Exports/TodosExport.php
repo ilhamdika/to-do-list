@@ -56,7 +56,7 @@ class TodosExport implements FromCollection, WithHeadings, WithMapping, WithEven
     {
         return [
             $todo->title,
-            $todo->assignee,
+            str_replace(' ', ', ', $todo->assignee),
             $todo->due_date,
             $todo->time_tracked,
             $todo->status,
