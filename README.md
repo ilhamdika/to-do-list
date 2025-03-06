@@ -48,6 +48,9 @@ Akses aplikasi di `http://127.0.0.1:8000`.
 
 ## Hasil running di postman
 
+dan untuk link postman bisa lihat di bawah ini:
+[Postman](https://documenter.getpostman.com/view/26658030/2sAYdmkT6t)
+
 ## Berikut adalah listnya
 
 ### 1️ API Create Todo List
